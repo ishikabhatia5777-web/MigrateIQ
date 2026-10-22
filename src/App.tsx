@@ -7,7 +7,6 @@ import { SupportedPlatforms } from './components/SupportedPlatforms';
 import { VideoShowcase } from './components/VideoShowcase';
 import { AgentShowcase } from './components/AgentShowcase';
 import { MarketplaceSection } from './components/MarketplaceSection';
-import { EcosystemSupport } from './components/EcosystemSupport';
 import { ContactSection } from './components/ContactSection';
 import { ArchitectureModal } from './components/ArchitectureModal';
 import { RoiCalculatorModal } from './components/RoiCalculatorModal';
@@ -81,10 +80,7 @@ export const App: React.FC = () => {
         {/* 8. Microsoft Marketplace Section */}
         <MarketplaceSection />
 
-        {/* 9. Microsoft Ecosystem Support */}
-        <EcosystemSupport />
-
-        {/* 10. Contact / Demo Section */}
+        {/* 9. Contact / Demo Section */}
         <ContactSection />
 
       </main>

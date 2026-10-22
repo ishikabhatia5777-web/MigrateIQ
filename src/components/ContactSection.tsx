@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
+import { AnimatedContactBackground } from './AnimatedContactBackground';
 
 export const ContactSection: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -10,7 +11,7 @@ export const ContactSection: React.FC = () => {
     name: '',
     email: '',
     company: '',
-    platform: 'Tableau Server / Cloud',
+    platform: 'Tableau Cloud',
     message: '',
   });
 
@@ -48,7 +49,7 @@ export const ContactSection: React.FC = () => {
       name: '',
       email: '',
       company: '',
-      platform: 'Tableau Server / Cloud',
+      platform: 'Tableau Cloud',
       message: '',
     });
     setSubmitted(false);
@@ -58,12 +59,8 @@ export const ContactSection: React.FC = () => {
   return (
     <section id="contact-section" className="relative py-20 lg:py-28 px-6 lg:px-12 overflow-hidden bg-slate-950">
       
-      {/* Background artwork matching vectorlab.ai */}
-      <img
-        src="https://images.squarespace-cdn.com/content/v1/679d89679ef8b943803f6a4a/489c20c3-9a7f-4454-8d21-36fd9b61953b/steve-johnson-9j2ulLVhqtc-unsplash.jpg"
-        alt="Vector Lab Demo Art"
-        className="absolute inset-0 w-full h-full object-cover object-center opacity-30"
-      />
+      {/* Dynamic Animated Background */}
+      <AnimatedContactBackground />
 
       <div className="relative z-10 max-w-4xl mx-auto">
         
@@ -77,7 +74,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* Contact Form Card */}
-        <div className="bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl max-w-2xl mx-auto">
+        <div className="bg-slate-900/80 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 sm:p-12 shadow-[0_0_50px_rgba(6,182,212,0.12)] ring-1 ring-cyan-500/20 max-w-2xl mx-auto transition-all">
           {submitted ? (
             <div className="text-center py-12">
               <CheckCircle2 className="w-16 h-16 text-emerald-400 mx-auto mb-4 animate-bounce" />
@@ -161,10 +158,8 @@ export const ContactSection: React.FC = () => {
                     onChange={(e) => setFormData({ ...formData, platform: e.target.value })}
                     className="w-full bg-slate-950 border border-white/15 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400 transition-colors disabled:opacity-50 cursor-pointer"
                   >
-                    <option value="Tableau Server / Cloud">Tableau Server / Cloud</option>
-                    <option value="Qlik Sense / QlikView">Qlik Sense / QlikView</option>
-                    <option value="Snowflake Data Layer">Snowflake Data Layer</option>
-                    <option value="Multiple BI Estates">Multiple BI Estates</option>
+                    <option value="Tableau Cloud">Tableau Cloud</option>
+                    <option value="Qlik Sense">Qlik Sense</option>
                   </select>
                 </div>
               </div>

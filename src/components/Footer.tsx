@@ -38,18 +38,8 @@ export const Footer: React.FC = () => {
           />
         </div>
 
-        {/* Right: Copyright and navigation */}
-        <div className="text-center md:text-right text-gray-500 space-y-1">
-          <div className="flex flex-wrap items-center justify-center md:justify-end gap-4 text-xs font-medium text-gray-600 mb-2">
-            <a href="#agents-showcase-section" className="hover:text-black transition-colors">
-              AI Agents
-            </a>
-            <span>&bull;</span>
-            <a href="#contact-section" className="hover:text-black transition-colors">
-              Request Demo
-            </a>
-          </div>
-
+        {/* Right: Copyright */}
+        <div className="text-center md:text-right text-gray-500">
           <p>&copy; {new Date().getFullYear()} AOSC Technologies. All rights reserved.</p>
         </div>
 

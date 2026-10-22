@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { PipelineStage } from '../types/migration';
 
 interface AgentShowcaseProps {
@@ -455,19 +455,6 @@ export const AgentShowcase: React.FC<AgentShowcaseProps> = ({ onSelectStage }) =
               </div>
             </div>
           </div>
-        </div>
-
-        {/* ── Secure by Design Callout */}
-        <div className="bg-slate-50 border border-gray-200 rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto">
-          <div className="w-12 h-12 rounded-2xl bg-cyan-100 text-cyan-800 flex items-center justify-center mx-auto mb-4">
-            <ShieldCheck className="w-6 h-6" />
-          </div>
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-950 font-display mb-4">
-            Secure by design
-          </h3>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Every agent is deployed as an isolated cloud-native microservice within the client's own environment. No source data, credentials, or workbook content is ever transmitted or stored externally — ensuring full compliance, data residency integrity, and enterprise-grade security.
-          </p>
         </div>
 
       </div>
